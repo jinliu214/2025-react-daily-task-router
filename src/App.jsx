@@ -1,5 +1,5 @@
-import './App.css';
-import { HashRouter, NavLink } from 'react-router-dom';
+import "./App.css";
+import { HashRouter, NavLink, Routes, Route } from "react-router-dom";
 
 const Todo = () => {
   return <p>這是 Todo 頁面</p>;
@@ -30,6 +30,15 @@ function App() {
           </NavLink>
         </div>
         {/* Routes, Route 練習區 */}
+        {/* 請撰寫 Routes, Route 的部分，
+        建立 register（註冊）, login（登入）,
+        todo（待辦事項） 三個頁面路由，讓上方的 Nav 選單可切換到各頁面。 */}
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/todo" element={<Todo />} />
+          <Route path="/" element={<p>這是首頁</p>} />
+        </Routes>
         {/* 練習區 */}
       </HashRouter>
     </div>
